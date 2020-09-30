@@ -19,6 +19,7 @@ getPage.onclick = () => {
 getJSON.onclick = () => {
     const request = new XMLHttpRequest()
     request.open("GET", "/5.json")
+    // 等下载完成了，浏览器会调这个函数
     request.onreadystatechange = () => {
         if (request.readyState === 4 && request.status === 200) {
             console.log(request.response)
